@@ -1,0 +1,68 @@
+create project:
+django-admin startproject project_name
+
+run project:
+python manage.py runserver
+
+we have two types of webpages on websites
+1) static Pages > everyone will see same page
+2) Dynamic pages > for example logedin to bank website, person will see his related properties on website
+------------------------------------------------------------------------------------------------------------------------
+create application :
+Modules are application, for example , login is one module
+
+>> python manage.py startapp app_name
+admin.py >
+apps.py >
+models.py > it use to hold data
+tests.py > to test our application
+views.py > when we send request we can handle that request here, to map our urls
+urls.py > urls for application
+------------------------------------------------------------------------------------------------------------------------
+manage.py > used to manage our project
+settings.py > to do settings in our project
+    Debug = True > while creating website, it will show sebug messages
+    Database = need to add database, by defaulf sqllite
+    Templates= add path of templates directory , os.path.join(BASE_DIR,"template_dir_name")
+url.py > we can add urls path
+------------------------------------------------------------------------------------------------------------------------
+
+we have to add path of application in urls.py of main project
+
+------------------------------------------------------------------------------------------------------------------------
+we can add html page by adding it in to views, but that will create static page
+but here we want to create dynamic page, using templates we can create dynamic pages
+Django template language
+------------------------------------------------------------------------------------------------------------------------
+
+create application > create functions in app->views > add that function names in app->url.py > add application url.py in
+main project->urls.py
+
+------------------------------------------------------------------------------------------------------------------------
+
+request is object of HTTP protocol it contains methods as below
+1) GET : we are expecting something from server
+2) POST : we are sending(submiting) something to the server
+3) PUT : to update the data on the server
+4) DELETE : to delete data from server
+
+------------------------------------------------------------------------------------------------------------------------
+CSRF mechanism in django:
+This occurs when we use Post method in html form
+to avoid this use csrf_token (middleware) in html file
+
+------------------------------------------------------------------------------------------------------------------------
+if we are using static files we need to add that path in django settings.py file
+
+STATICFILES_DIRS = [ os.path.join(BASe_DIR, "static")]
+STATIC_ROOT = os.path.join(BASE_DIT, "assets")
+
+after adding above things we need to give one command to the django to work on it
+python manage.py collectstatic --> it will collect all the static files from given directory in above STATICFIES_DIRS
+and coppy in to assets folder as provided in STATIC_ROOT
+------------------------------------------------------------------------------------------------------------------------
+after giving collectstatic command django will coppy all the static files from given location to provided root location
+
+now we have to load static in to our html and we need to give refernce as static to the all links in html file
+{% load static %}
+

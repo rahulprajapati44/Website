@@ -1,0 +1,41 @@
+# framwork django->
+It is web application framework
+Frontend :
+HTML CSS-> to improve designing,
+JAvascript -> to make website interactive
+
+Backend:
+To make website as dynamic we need to use below
+sarvlet
+javascript
+PHP
+ASP
+Python --> Django, flask
+
+MVC is mechanism to work on backend
+
+1) Model
+2) View
+3) Controller
+
+in django we have MVT
+1) Model
+2) View
+3) Template
+
+why django?:
+1 its fast
+2 more number of components available
+3 security
+4 scalability : to add features in existing website
+
+Data , Layout and Logic:
+each model is linked to database
+template: DTL
+
+                                     |<---->Model---->Database
+user-->django-->urls.py-->views.py-->|
+                                     |<---->Template
+
+------------------------------------------------------------------------------------------------------------------------
+
